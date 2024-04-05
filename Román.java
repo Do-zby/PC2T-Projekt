@@ -1,19 +1,19 @@
 import java.util.List;
 
-public class Román extends Kniha
+public class Učebnica extends Kniha
 {
-	private String Žáner;
-	public Román(String názov, List<String> autori,int rok, String Vypozicanie, String Žáner)
+	private String Ročnik;
+	public Učebnica(String názov,List<String> autori,int rok, String Vypozicanie, String Ročnik)
 	{
 		super(názov, autori, rok, Vypozicanie);
-		this.Žáner =  Žáner;
+		this. Ročnik =  Ročnik;
 	}
-	public String getŽáner()
+	public String getRočnik()
 	{
-		return Žáner;
+		return Ročnik;
 	}
-	public void setŽáner(String novýRočnik) 
+	public void setRočnik(String novýRočnik) 
 	{
-		
+		this. Ročnik =  novýRočnik;
 	}
 }
