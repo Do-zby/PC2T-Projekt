@@ -51,7 +51,7 @@ public class Kniha
 		{
 			this.rok = novýRok;
 		}
-		public void setVypozicanie(String novéVypozicanie) 
+		public void setVypozicanie(String novéVypozicanie)
 		{
 			this.Vypozicanie = novéVypozicanie;
 		}
