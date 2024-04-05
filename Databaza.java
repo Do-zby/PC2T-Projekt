@@ -27,6 +27,7 @@ public class Databaza {
         else
             return false;
     }
+    
     public boolean upravaKnihy(String názov, List<String> novíAutori, int novýRok, String novéVypozicanie) 
     {
         Kniha kniha = prvkyDatabazy.get(názov);
@@ -40,6 +41,34 @@ public class Databaza {
             return false;
         }
     }
+    
+    public boolean odstranenieKnihy(String nazovKnihy) 
+    {
+    	Kniha kniha = prvkyDatabazy.get(nazovKnihy);
+        if (kniha != null) 
+        {
+        	prvkyDatabazy.remove(nazovKnihy);
+			System.out.println("Kniha "+nazovKnihy+" bola odstránená.");
+        	return true;
+        }
+        	else
+    		System.out.println("Kniha s názvom "+nazovKnihy+" neexistuje.");
+        	return false;
+    }
+    
+    public boolean zmenaDostupnosti(String nazovKnihy, String Vypozicanie) 
+    {
+        Kniha kniha = prvkyDatabazy.get(nazovKnihy);
+        if (kniha != null) 
+        {
+            kniha.setVypozicanie(Vypozicanie);
+            return true;
+        } 
+        else
+    		System.out.println("Kniha s názvom "+nazovKnihy+" neexistuje.");
+            return false;
+    }
+        
     public void vypisDatabázy() {
         Set<Map.Entry<String, Kniha>> záznamy = prvkyDatabazy.entrySet();
         for (Map.Entry<String, Kniha> záznam : záznamy) {
