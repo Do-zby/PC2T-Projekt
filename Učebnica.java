@@ -14,6 +14,6 @@ public class Učebnica extends Kniha
 	}
 	public void setRočnik(String novýRočnik) 
 	{
-		
+		this. Ročnik =  novýRočnik;
 	}
 }
